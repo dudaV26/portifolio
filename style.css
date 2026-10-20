@@ -98,15 +98,12 @@ header ul li a {
   max-width: 20ch;
 }
 
-.hero-section h2 span {
+h2 span,
+p span {
   background-image: var(--cor-gradient);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-}
-
-.h2 span {
-  background-image: none;
 }
 
 .hero-section p {
@@ -233,14 +230,17 @@ header ul li a {
 }
 
 .projects-section article a {
-  background-color: var(--bg-button-primario);
+  background-image: var(--bg-button-primario);
   color: var(--cor-texto-button-primario);
 
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
 
   border-radius: 1.5rem;
+  padding: 0.5rem 1.5rem;
+  margin-top: 1rem;
+  width: fit-content;
 }
 
 .contact-section div p {
@@ -294,7 +294,8 @@ form button {
 
 form button {
   color: var(--cor-texto-button-primario);
-  background-color: var(--bg-button-primario);
+  background-image: var(--bg-button-primario);
+  cursor: pointer;
 }
 
 footer {
@@ -347,5 +348,25 @@ footer a {
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     margin-top: 2rem;
+  }
+}
+
+@media screen and (min-width: 75rem) {
+  .projects-section ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .contact-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .contact-section div {
+    text-align: left;
+  }
+
+  .contact-section div p {
+    margin: 1rem 0;
   }
 }
