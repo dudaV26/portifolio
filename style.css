@@ -101,9 +101,16 @@ header ul li a {
 h2 span,
 p span {
   background-image: var(--cor-gradient);
+  background-size: 300% 300%;
+  background-position: 0% 50%;
+
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
+  animation-name: gradiente-animacao;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
 
 .hero-section p {
@@ -368,5 +375,19 @@ footer a {
 
   .contact-section div p {
     margin: 1rem 0;
+  }
+}
+
+@keyframes gradiente-animacao {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
   }
 }
